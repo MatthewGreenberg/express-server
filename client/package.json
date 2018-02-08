@@ -8,6 +8,8 @@
     }
   },
   "dependencies": {
+    "node-sass-chokidar": "0.0.3",
+    "normalize.css": "^7.0.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.6",
@@ -16,6 +18,8 @@
     "redux": "^3.7.2"
   },
   "scripts": {
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive --prefix client",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",

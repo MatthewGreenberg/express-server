@@ -1,13 +1,9 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
-import {connect} from 'react-redux';
+import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 import './header.css';
 
 class Header extends React.Component {
-
-  handleGoogleAuthClick() {
-    console.log(this.props);
-  }
 
   renderContent() {
     switch (this.props.auth) {
@@ -34,11 +30,15 @@ class Header extends React.Component {
     }
   }
   render() {
-    console.log(this.props.auth);
     return (
       <div className='header'>
         {this.renderContent()}
-        <h1 className='header__title'>Quiggly</h1>
+        <Link
+          to={this.props.auth ? '/surveys' : '/'}
+          className='header__title'
+        >
+          Quiggly
+        </Link>
 
       </div>
     );

@@ -1,0 +1,8 @@
+.landing {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 1em; }
+
+.landing__title {
+  font-size: 4em; }

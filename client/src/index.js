@@ -14,3 +14,5 @@ ReactDOM.render(
   <Provider store={store}><App /></Provider>,
   document.querySelector('#root')
 );
+
+console.log('Our Node Env is:', process.env.NODE_ENV)

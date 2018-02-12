@@ -8,7 +8,9 @@
 
 .header__title {
   text-decoration: none;
-  font-size: 30px; }
+  font-size: 30px;
+  font-weight: 400;
+  color: black; }
 
 .header__button {
   border: 3px solid black;

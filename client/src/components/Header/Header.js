@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import Payments from '../Payments/Payments';
 import './header.css';
 
 class Header extends React.Component {
@@ -20,12 +21,18 @@ class Header extends React.Component {
         );
       default:
         return (
-          <a
-            href='/api/logout'
-            className='header__button'
-          >
-            Log Out
-          </a>
+          <div className='header__content-wrapper'>
+            <Payments />
+            <div className='header__credits'>
+              {`Credits: ${this.props.auth.credits}`}
+            </div>
+            <a
+              href='/api/logout'
+              className='header__button header__button--sign-out'
+            >
+              Log Out
+            </a>
+          </div>
         )
     }
   }
@@ -39,7 +46,6 @@ class Header extends React.Component {
         >
           Quiggly
         </Link>
-
       </div>
     );
   }

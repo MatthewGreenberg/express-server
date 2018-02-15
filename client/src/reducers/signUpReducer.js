@@ -5,7 +5,7 @@ import { SET_PASSWORD } from '../actions/types';
 
 
 const initialState = {
-  userName: '',
+  username: '',
   password: '',
   email: ''
 }
@@ -15,7 +15,7 @@ export default (state = initialState, action) => {
     case SET_USERNAME:
       return {
         ...state,
-        userName: action.payload
+        username: action.payload
       }
 
       case SET_PASSWORD:

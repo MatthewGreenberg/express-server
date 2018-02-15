@@ -1,18 +1,18 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import './sign-up.css';
+import '../SignUp/sign-up.css';
 import * as actions from '../../actions';
 
 class SignUp extends React.Component {
 
   handleSubmit() {
-    this.props.submitUser(this.props.signUp);
+    this.props.logIn(this.props.signUp);
   }
 
   render() {
     return (
       <div className='sign-up'>
-        <h1 className='sign-up__header'>Sign Up</h1>
+        <h1 className='sign-up__header'>Log In</h1>
         <form
           className='sign-up__form'
         >

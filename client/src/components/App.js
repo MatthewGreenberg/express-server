@@ -8,7 +8,7 @@ import Header from './Header/Header';
 import Landing from './Landing/Landing';
 import SignUp from './SignUp/SignUp';
 import LogIn from './LogIn/LogIn';
-const Dashboard = () => <h2>Dashboard</h2>
+import Dashboard from './Dashboard/Dashboard';
 const SurveryNew = () => <h2>SurveryNew</h2>
 
 class App extends React.Component {

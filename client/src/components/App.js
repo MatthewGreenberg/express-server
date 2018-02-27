@@ -8,8 +8,8 @@ import Header from './Header/Header';
 import Landing from './Landing/Landing';
 import SignUp from './SignUp/SignUp';
 import LogIn from './LogIn/LogIn';
+import SurveryNew from './Surveys/SurveyNew';
 import Dashboard from './Dashboard/Dashboard';
-const SurveryNew = () => <h2>SurveryNew</h2>
 
 class App extends React.Component {
 
@@ -21,7 +21,7 @@ class App extends React.Component {
     return (
       <div className='app'>
         <BrowserRouter>
-          <div>
+          <div className='container'>
             <Header />
             <Route exact path='/' component={Landing} />
             <Route exact path='/signup' component={SignUp} />

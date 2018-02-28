@@ -48,7 +48,8 @@ export const logIn = (props) => async (dispatch) => {
 };
 
 // Send Survey
-
-export const submitSurvey = values => {
-  return {type: 'submitSurvey'};
+export const submitSurvey = (values, history) => async (dispatch) => {
+  const res = await axios.post('/api/surveys', values);
+  history.push('/surveys');
+  dispatch({ type: FETCH_USER, payload: res.data });
 };

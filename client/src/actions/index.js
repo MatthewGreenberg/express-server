@@ -46,3 +46,9 @@ export const logIn = (props) => async (dispatch) => {
   console.log('res is:', res);
   dispatch({ type: FETCH_USER, payload: res.data });
 };
+
+// Send Survey
+
+export const submitSurvey = values => {
+  return {type: 'submitSurvey'};
+};
